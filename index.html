@@ -1,4 +1,4 @@
-iPad 沙和用　アプリっぽく
+ipad 沙和用　アプリ版
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -61,6 +61,7 @@ iPad 沙和用　アプリっぽく
     width: 100%;
     /* min-height を削除するか、より小さくする */
     min-height: 100px; 
+
     background: #fff;
     border: 2px solid #ddd;
     border-radius: 12px;
@@ -169,18 +170,21 @@ button, input[type="range"] {
     touch-action: manipulation;
 }
 /* ツールボタンの親コンテナの調整 */
-
 .tool-btns {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2列で均等割り */
-    gap: 8px;
-    width: 50%;                          /* 横幅いっぱいにする */
+    grid-template-columns: 80px 80px; /* ボタンの横幅を固定 */
+    gap: 6px;
+    width: auto; /* 幅を自動にして縮める */
+    flex-shrink: 0; /* 小さくならないようにする */
 }
+/* ボタン自体のサイズ調整 */
 .tool-btns button {
-    width: 100%;                          /* 幅を可変にする */
-    height: 45px;                         /* 少し大きくして押しやすく */
+    height: 32px;      /* 高さを少し小さめに固定 */
+    width: 80px;       /* 横幅を固定 */
+    font-size: 11px;
+    padding: 0;
+    margin: 0;
 }
-
 /* 「全消去」ボタンが2列分使う設定はそのまま維持 */
 #clearBtn {
     grid-column: span 2;
@@ -219,7 +223,7 @@ button, input[type="range"] {
     position: relative;
     /* ...既存のスタイル... */
 }
-        @media (min-width: 768px) { .container { max-width: 1200px; margin: 0 auto; } }
+        @media (min-width: 600px) { .container { max-width: 480px; margin: 0 auto; } }
     </style>
 </head>
 <body>
