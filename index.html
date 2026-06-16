@@ -48,6 +48,7 @@ ipad 沙和用　アプリ版
     width: 100vw;
     height: 100vh;
     height: calc(var(--vh, 1vh) * 100);
+    min-height: 100vh;
     padding: 10px;
     gap: 10px;
     /* はみ出し防止の設定 */
@@ -59,7 +60,7 @@ ipad 沙和用　アプリ版
 .canvas-container {
     flex: 1;              /* ここで余白を埋めるように指示 */
     width: 100%;
-    min-height: 300px;    /* 最低これくらいは確保 */
+    min-height: 50vh;    /* 最低これくらいは確保 */
     
     /* 追加：これを入れると、親要素の高さ設定を継承しやすくなります */
     display: flex;        
