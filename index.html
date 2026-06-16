@@ -1,5 +1,4 @@
-iPad 沙和用　アプリ版
-
+iPad 沙和用　アプリっぽく
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -61,7 +60,7 @@ iPad 沙和用　アプリ版
     flex: 1; /* 余ったスペースを埋める */
     width: 100%;
     /* min-height を削除するか、より小さくする */
-    min-height: 300px; 
+    min-height: 100px; 
     background: #fff;
     border: 2px solid #ddd;
     border-radius: 12px;
@@ -175,7 +174,7 @@ button, input[type="range"] {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2列で均等割り */
     gap: 8px;
-    width: 100%;                          /* 横幅いっぱいにする */
+    width: 50%;                          /* 横幅いっぱいにする */
 }
 .tool-btns button {
     width: 100%;                          /* 幅を可変にする */
@@ -220,21 +219,7 @@ button, input[type="range"] {
     position: relative;
     /* ...既存のスタイル... */
 }
-
-@media (min-width: 768px) {
-    .container {
-        flex-direction: row;      /* 左右に並べる */
-        max-width: 1200px;        /* 最大幅を広げる */
-        align-items: flex-start;
-    }
-    .canvas-container {
-        max-height: 80vh;         /* 高さを確保 */
-    }
-    .controls {
-        width: 300px;             /* パネルの幅をしっかり取る */
-    }
-}
-
+        @media (min-width: 768px) { .container { max-width: 1200px; margin: 0 auto; } }
     </style>
 </head>
 <body>
