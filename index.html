@@ -57,11 +57,14 @@ ipad 沙和用　アプリ版
 
 
 .canvas-container {
-    flex: 1; /* 余ったスペースを埋める */
+    flex: 1;              /* ここで余白を埋めるように指示 */
     width: 100%;
-    /* min-height を削除するか、より小さくする */
-    min-height: 100px; 
-
+    min-height: 300px;    /* 最低これくらいは確保 */
+    
+    /* 追加：これを入れると、親要素の高さ設定を継承しやすくなります */
+    display: flex;        
+    flex-direction: column;
+    
     background: #fff;
     border: 2px solid #ddd;
     border-radius: 12px;
@@ -70,6 +73,7 @@ ipad 沙和用　アプリ版
     touch-action: none;
     overscroll-behavior: none;
 }
+
 
 .canvas-container canvas {
     transform-origin: 0 0; /* ← これをCSSに追加してください */
