@@ -45,13 +45,13 @@ ipad 沙和用　アプリ版
 .container {
     display: flex;
     flex-direction: column;
-    width: 100vw;
-    height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
-    min-height: 100vh;
+    /* 画面からはみ出さない最大高さを指定 */
+    height: 90vh; 
+    /* ツールバーの影響を考慮して少し余裕を持たせる */
+    max-height: 90vh; 
     padding: 10px;
     gap: 10px;
-    /* はみ出し防止の設定 */
+    /* これが重要：はみ出したらスクロールするのではなく、中の要素を縮める */
     overflow: hidden; 
 }
 
@@ -60,7 +60,7 @@ ipad 沙和用　アプリ版
 .canvas-container {
     flex: 1;              /* ここで余白を埋めるように指示 */
     width: 100%;
-    min-height: 50vh;    /* 最低これくらいは確保 */
+    min-height: 100px;    /* 最低これくらいは確保 */
     
     /* 追加：これを入れると、親要素の高さ設定を継承しやすくなります */
     display: flex;        
